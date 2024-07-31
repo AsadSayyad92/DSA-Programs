@@ -1,4 +1,4 @@
-# DSA-Programs-C-
+# DSA-Programs
 
 
 Welcome to the DSA Programs in C++ repository! This repository contains a comprehensive collection of Data Structures and Algorithms (DSA) implemented in C++. Whether you're a beginner looking to learn DSA concepts or an experienced programmer seeking to refresh your knowledge, this repository serves as a valuable resource for all your needs.
