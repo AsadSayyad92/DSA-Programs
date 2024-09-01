@@ -11,7 +11,7 @@ public:
 
 Queue(){
     // initialization
-    size = 100001;
+    size = 5;
     arr = new int[size];
     qfront = 0;
     rear = 0;
@@ -28,7 +28,7 @@ bool isEmpty(){
 }
 
 void enqueue(int data){
-    if(rear == size){
+    if(qfront ==0 && rear == size){
         cout<<"queue is full"<<endl;
     }
     else{
@@ -81,7 +81,13 @@ int main(){
     q.enqueue(5);
     q.enqueue(6);
     q.enqueue(6);
+    q.enqueue(6);
+    q.enqueue(6);
     q.dequeue();
+    q.dequeue();
+    
+    q.enqueue(7);
+    
 
     q.display();    
     return 0;
