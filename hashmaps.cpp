@@ -23,26 +23,53 @@ int main() {
 }
 
 
-// class Solution {
-// public:
-//     int findLucky(vector<int>& arr) {
-//         unordered_map<int,int>freq;
-//         int result = -1;
+class Solution {
+public:
+    int findLucky(vector<int>& arr) {
+        unordered_map<int,int>freq;
+        int result = -1;
 
-//         // for counting the frequency
-//         for(int num:arr){
-//             freq[num]++;
-//         }
+        // for counting the frequency
+        for(int num:arr){
+            freq[num]++;
+        }
 
-//         //check for lucky number
-//         for(const auto& entry :freq){
-//             int num = entry.first;
-//             int count = entry.second;
+        //check for lucky number
+        for(const auto& entry :freq){
+            int num = entry.first;
+            int count = entry.second;
 
-//             if(num==count){
-//                 result = max(result,num);
-//             }
-//         }
-//         return result;
-//     }
-// };
+            if(num==count){
+                result = max(result,num);
+            }
+        }
+        return result;
+    }
+};
+
+class Solution {
+public:
+    bool isIsomorphic(string s, string t) {
+        unordered_map<char,char> freq_s;
+        unordered_map<char,char> freq_t;
+
+        if(s.size()!=t.size()){
+            return false;
+        }
+
+        for(int i=0;i<s.size();i++){
+            char c1 = s[i];
+            char c2 = t[i];
+
+            if(freq_s.count(c1) && freq_s[c1]!= c2 ||  freq_t.count(c2) && freq_t[c2]!=c1){
+                return false;
+            } 
+
+            freq_s[c1] = c2;
+            freq_t[c2] = c1;
+        }
+        return true;
+        
+    }
+};
+    
