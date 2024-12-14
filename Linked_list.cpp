@@ -127,7 +127,10 @@ int main(){
     insertatPosition(tail,head,4,22);
     print(head);
 
-    deletion(4,head);
+    deletion(2,head);
+    print(head);
+
+    insertatHead(head,90);
     print(head);
     return 0;
 } 
